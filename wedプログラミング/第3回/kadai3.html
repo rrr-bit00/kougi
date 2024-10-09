@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>要素の取得</title>
+
+    <script type="text/javascript">
+          function check()
+          {
+            alert( document.getElementById('test').innerHTML );
+            document.getElementById('test').innerHTML = '<h1>テスト</h1>';
+          }
+	        function updateMessage(mes)
+	        {
+            document.getElementById('mes').innerHTML = mes;
+	        }
+    </script>
+  </head>
+
+  <body>
+
+    <h1 id='title'>JavaScript による出力</h1>
+    <input type='button' value='Check' onclick='check()'>
+    <input type='button' value='Hello' onclick='updateMessage("Hello")'>
+    <input type='button' value='Bonjour' onclick='updateMessage("Bonjour")'>
+
+    <hr />
+    <div id='test'>ここが id:test の中</div>
+    <hr />
+    <div id='mes'></div>
+
+  </body>
+</html>
+
