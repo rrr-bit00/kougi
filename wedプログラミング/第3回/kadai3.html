@@ -13,8 +13,14 @@
           }
 	        function updateMessage(mes)
 	        {
-            document.getElementById('mes').innerHTML = mes;
-	        }
+            document.getElementById('mes').innerHTML = mes
+          }
+
+          function updateTitle(new_title)
+          {
+            document.getElementById('title').innerHTML = new_title;
+          }
+
     </script>
   </head>
 
@@ -24,6 +30,8 @@
     <input type='button' value='Check' onclick='check()'>
     <input type='button' value='Hello' onclick='updateMessage("Hello")'>
     <input type='button' value='Bonjour' onclick='updateMessage("Bonjour")'>
+    
+    <input type='button' value='Change_Title' onclick='updateTitle("タイトルの書き換え")'>
 
     <hr />
     <div id='test'>ここが id:test の中</div>
