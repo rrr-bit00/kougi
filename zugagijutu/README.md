@@ -1,1 +1,1 @@
-# zugagijutu
+# 図化技術概論
