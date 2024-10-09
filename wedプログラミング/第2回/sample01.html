@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://iis.edu.tama.ac.jp/websv/sample1-1.html -->
+<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>JavaScript はどこに書く？</title>
+
+    <script type="text/javascript">
+        // JavaScript のコメントは「／／」。ユーザから見えるので注意！
+        // １つ目：ヘッダの中。これは、関数定義だけしといて、あとから誰かに呼んでもらおうとしている。
+	        function first(mes)
+	        {
+                alert('１つ目');
+	        }
+    </script>
+
+	<script type="text/javascript" src="./sample1-1.js"></script>
+    <!-- HTML のコメントは、コメントタグに書く。ユーザから見えるので注意！ -->
+	<!-- ２つ目：別ファイルに置いておいて、src で参照する -->
+  </head>
+
+  <body>
+
+    <h1 id="title">JavaScript 関数の呼び出し</h1>
+
+<p>JavaScript の関数呼び出しの方法やタイミングはいろいろ。今回は、<tt>button</tt> の <tt>onclick</tt> で呼び出す。</p>
+
+    <input type="button" value="Hello1" onclick="first()">
+    <input type="button" value="Hello2" onclick="second()">
+
+<h1>課題</h1>
+この HTML ファイル内にある <tt>third()</tt> 関数を呼び出すボタンを新たに作成しなさい。
+
+<script type="text/javascript">
+  // ３つ目：ボディの中
+  function third()
+  {
+      alert('３つ目！');
+  }
+</script>
+
+<p><input type="button" value="Hello3" onclick="third()">
+
+
+  
+
+</body></html>

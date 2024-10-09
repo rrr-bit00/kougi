@@ -1,0 +1,48 @@
+body {
+  background-color: #FFF;
+}
+
+h1  {
+  color: #000;
+}
+
+div#test01 {
+  color: #00a;
+}
+
+.important {
+  color: #a00;
+}
+
+#members,
+#members th,
+#members td {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+.header {
+  background-color:aqua;
+  color: #026a00;
+
+}
+
+.ol {
+  background-color: lightgreen;
+  color: purple;
+
+}
+
+.el {
+  background-color: rgba(7, 116, 35, 0.313);
+  color: rgb(27, 139, 5);
+
+}
+
+.last3 {
+  font-weight: bold;
+}
+
+.name {
+  text-align: center;
+}
