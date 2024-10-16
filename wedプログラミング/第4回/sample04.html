@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://iis.edu.tama.ac.jp/websv/sample2-1.html -->
+<html lang="ja" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title></title>
+        <script type="text/javascript">
+        function varTest1()
+        {
+            var x = 100;
+            var y = 'yen';
+            document.getElementById('answer').innerHTML = x+y;
+        }
+        function varTest2()
+        {
+            var x = '100';
+            var t = x*1.10;
+            var y = 'yen';
+            document.getElementById('answer').innerHTML = t+y;
+        }
+        function varTest3()
+        {
+            var x = '100';
+            var t = x*0.10;
+            var y = 'yen';
+            document.getElementById('answer').innerHTML = x+t+y;
+        }
+        function quiz()
+        {
+            var x = '1';
+            var y = 2;
+            var z = 3;
+            alert(x+y+z);
+            alert(y+z+x);
+            alert(z+x+y);
+        }
+        function conv1()
+        {
+            var s = '123';
+            var x = Number(s);
+            alert( s + 456 );
+            alert( x + 456 );
+        }
+        function conv2()
+        {
+            var s = '123.456';
+            var x = Number.parseInt(s);
+            var y = Number.parseFloat(s);
+            alert( x );
+            alert( y );
+        }
+        function conv3()
+        {
+            var s = '123cm';
+            var x = Number.parseInt(s);
+            alert( x );
+        }
+        function conv4()
+        {
+            var s = '高さ123cm';
+            var x = Number.parseInt(s);
+            alert( x );
+        }
+        function conv5()
+        {
+            var s = '11010010';
+            var x = Number.parseInt(s,2);
+            alert( x );
+        }
+        function practice()
+        {
+            // Input 要素の中の文字列は、innerHTML ではなくて value に入っている
+            var s = document.getElementById('price').value;
+
+            alert(s);
+        }
+        </script>
+    </head>
+    <body>
+        <h1>動作チェック</h1>
+        <div id="answer"></div>
+        <div id="tax"></div>
+
+        <button type="button" onclick="varTest1()">整数＋文字列？</button>
+        <button type="button" onclick="varTest2()">文字列で掛け算？</button>
+        <button type="button" onclick="varTest3()">おかしい。</button>
+        <hr>
+        <h1>クイズ</h1>
+        <button type="button" onclick="quiz()">クイズ</button>
+        <hr>
+        <h1>型変換</h1>
+        <button type="button" onclick="conv1()">変換１</button>
+        <button type="button" onclick="conv2()">変換２</button>
+        <button type="button" onclick="conv3()">変換３</button>
+        <button type="button" onclick="conv4()">変換４</button>
+        <button type="button" onclick="conv5()">変換５</button>
+        <hr>
+        <hr>
+        <h1>練習問題</h1>
+        <p>practice() 関数が、10％の税と、税込み合計価格を表示するように修正しなさい。
+        <input type="text" id="price">
+        <br>
+        税：</p><div id="tax"></div>
+        合計：<div id="total"></div>
+        <button type="button" onclick="practice()">税込価格</button>
+    
+
+</body></html>
