@@ -70,15 +70,17 @@
         {
             // Input 要素の中の文字列は、innerHTML ではなくて value に入っている
             var s = document.getElementById('price').value;
-
-            alert(s);
+            var n = Number(s);
+            var zei = n * 0.1;
+            var sum = n + zei;
+            document.getElementById('tax').innerHTML = zei;
+            document.getElementById('total').innerHTML = sum;
         }
         </script>
     </head>
     <body>
         <h1>動作チェック</h1>
         <div id="answer"></div>
-        <div id="tax"></div>
 
         <button type="button" onclick="varTest1()">整数＋文字列？</button>
         <button type="button" onclick="varTest2()">文字列で掛け算？</button>
