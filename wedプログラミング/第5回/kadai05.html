@@ -8,8 +8,54 @@
       function plus1()
       {
         var lifeNow = document.getElementById('life').innerHTML;
+        document.getElementById('life').innerHTML = Number(lifeNow) + 1;
         alert(lifeNow);
       }
+
+      function minus1()
+      {
+        var lifeNow = document.getElementById('life').innerHTML;
+        document.getElementById('life').innerHTML = Number(lifeNow) - 1;
+      }
+
+      function reset()
+      {
+        document.getElementById('life').innerHTML = 20;
+        alert('Reset');
+      }
+      
+      function plus()
+      {
+        var num = document.getElementById('multi').value;
+        var lifeNow = document.getElementById('life').innerHTML;
+        document.getElementById('life').innerHTML = Number(lifeNow) + Number(num);
+        document.getElementById('multi').value = "";
+      }
+
+      function minus()
+      {
+        var num = document.getElementById('multi').value;
+        var lifeNow = document.getElementById('life').innerHTML;
+        document.getElementById('life').innerHTML = Number(lifeNow) - Number(num);
+        document.getElementById('multi').value = "";
+      }
+
+      function multiplication()
+      {
+        var num = document.getElementById('multi').value;
+        var lifeNow = document.getElementById('life').innerHTML;
+        document.getElementById('life').innerHTML = Number(lifeNow) * Number(num);
+        document.getElementById('multi').value = "";
+      }
+
+      function division()
+      {
+        var num = document.getElementById('multi').value;
+        var lifeNow = document.getElementById('life').innerHTML;
+        document.getElementById('life').innerHTML = Number(lifeNow) / Number(num);
+        document.getElementById('multi').value = "";
+      }
+
     </script>
   </head>
   <body>
@@ -18,5 +64,14 @@
     <div id="life" class="lifecounter">20</div>
 <hr />
     <input type="button" value="+1" onclick="plus1()">
+    <input type="button" value="-1" onclick="minus1()">
+    <input type="button" value="Reset" onclick="reset()">
+<hr />
+    値を入力して計算<br>
+    <input type="text" id="multi"><br>
+    <button type="button" onclick="plus()">+</button>
+    <button type="button" onclick="minus()">-</button>
+    <button type="button" onclick="multiplication()">×</button>
+    <button type="butoon" onclick="division()">÷</button>
   </body>
 </html>
