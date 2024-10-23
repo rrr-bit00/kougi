@@ -56,6 +56,26 @@
         document.getElementById('multi').value = "";
       }
 
+      function judge()
+      {  var num = document.getElementById('life').innerHTML;
+        if (num >= 0 && num <= 20)
+        {
+          const lifecounter = document.querySelector('.lifecounter');
+          lifecounter.style.color = 'red';
+        }
+        
+        else if (num <= 50)
+        {
+          const lifecounter = document.querySelector('.lifecounter');
+          lifecounter.style.color = "lime";
+        }
+
+        else if (num > 50)
+        {
+          const lifecounter = document.querySelector('.lifecounter');
+          lifecounter.style.color = "green";
+        }
+      }
     </script>
   </head>
   <body>
@@ -63,15 +83,15 @@
 <hr />
     <div id="life" class="lifecounter">20</div>
 <hr />
-    <input type="button" value="+1" onclick="plus1()">
-    <input type="button" value="-1" onclick="minus1()">
-    <input type="button" value="Reset" onclick="reset()">
+    <input type="button" value="+1" onclick="plus1() ; judge()">
+    <input type="button" value="-1" onclick="minus1() ; judge()">
+    <input type="button" value="Reset" onclick="reset() ; judge()">
 <hr />
     値を入力して計算<br>
     <input type="text" id="multi"><br>
-    <button type="button" onclick="plus()">+</button>
-    <button type="button" onclick="minus()">-</button>
-    <button type="button" onclick="multiplication()">×</button>
-    <button type="butoon" onclick="division()">÷</button>
+    <button type="button" onclick="plus() ; judge()">+</button>
+    <button type="button" onclick="minus() ; judge()">-</button>
+    <button type="button" onclick="multiplication() ; judge()">×</button>
+    <button type="butoon" onclick="division() ; judge()">÷</button>
   </body>
 </html>
