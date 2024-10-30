@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="sample6.css">
+    <title>rewrite attributes</title>
+    <script type="text/javascript">
+        function newName()
+        {
+            var b = document.getElementById('button1');
+            b.value = '新しい値';
+
+            var h = document.getElementById('header1');
+            h.className = 'important';
+            h.innerHTML = '重要な見出し';
+
+            var a = document.getElementById('anchor1');
+            a.href = 'https://iis.edu.tama.ac.jp/websv';
+
+
+        }
+    </script>
+  </head>
+  <body>
+    <h1>attribute の書き換え</h1>
+<hr />
+    <h1 id='header1' class=''>どうでもいい見出し</h1>
+
+    <input id='button1' type="button" value="Click Me!" onclick="newName()">
+
+    <a id='anchor1' href=''>どこでもないリンク</a>
+  </body>
+</html>

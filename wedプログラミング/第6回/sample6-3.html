@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="sample6.css">
+    <title>Create Element</title>
+    <script type="text/javascript">
+    function createH1()
+    {
+        var h = document.createElement('h1');
+        h.innerHTML = '自動生成見出し';
+        document.getElementById('new').appendChild(h);
+    }
+    </script>
+  </head>
+  <body>
+    <div id="new"></div>
+<hr />
+    <input id='button1' type="button" value="Click Me!" onclick="createH1()">
+  </body>
+</html>
