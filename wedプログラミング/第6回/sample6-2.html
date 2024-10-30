@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="sample6.css">
+    <title>rewrite onclick</title>
+    <script type="text/javascript">
+    function f1()
+    {
+        var b = document.getElementById('button1');
+        b.value = '押したな？';
+        b.onclick = function() {f2();};
+    }
+    function f2()
+    {
+        var b = document.getElementById('button1');
+        b.value = 'clicked?';
+        b.onclick = function() {f3();};
+    }
+    function f3()
+    {
+        var b = document.getElementById('button1');
+        b.value = 'cliqué?';
+        b.onclick = function() {f1();};
+    }
+    </script>
+  </head>
+  <body>
+    <h1>attribute の書き換え</h1>
+<hr />
+    <input id='button1' type="button" value="Click Me!" onclick="f1()">
+  </body>
+</html>

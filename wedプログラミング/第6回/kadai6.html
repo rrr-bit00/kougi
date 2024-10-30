@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>createElement, appendChild</title>
+    <script type="text/javascript">
+
+      function addItem()
+      {
+		  var bookmark = document.getElementById('bookmark');
+		  var row = document.createElement('li');
+		  // 課題：
+		  // row の中に id:linkname のテキストを入れてから
+		  // bookmark に appendChild しなさい。
+
+		  // 発展課題：
+		  // その代わりに、createElement('a') でアンカータグを生成し、
+		  // その innerHTML に id:linkname
+		  // その href オプションに id:href を代入し、target オプションに "_blank" を指定して
+		  // bookmark に appendChild しなさい。
+		  // 生成例：<a href='www.tama.ac.jp' target='_blank'>多摩大学</a>
+		  // （強制的に文字列を生成して、li タグの innerHTML に指定しても動きますが、
+		  // 　いちおう、ちゃんと createElement してみましょう）
+		  // https://www.w3schools.com/jsref/prop_link_href.asp
+
+      }
+
+    </script>
+  </head>
+  <body>
+    <h1>createElement, appendChild</h1>
+<hr />
+    <input type="button" value="Add Name" onclick="addItem()">
+    <br />
+    <input type="text" id="linkname" value=""><br />
+	  <input type="text" id="href" value="">
+
+    <ul id='bookmark'></ul>
+  </body>
+</html>

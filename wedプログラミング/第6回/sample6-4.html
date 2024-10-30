@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>createElement, appendChild</title>
+    <script type="text/javascript">
+      function createTable()
+      {
+        var node = document.createElement('table');
+        node.id = 'myTable';
+		    document.getElementById('tableArea').appendChild(node);
+
+        var row = document.createElement('tr');
+
+        var uid = document.createElement('th');
+        uid.innerHTML = 'User ID';
+        row.appendChild( uid );
+        var name = document.createElement('th');
+        name.innerHTML = 'Name';
+        row.appendChild( name );
+
+        node.appendChild( row );
+      }
+
+      function addRow()
+      {
+		  var t = document.getElementById('myTable');
+		  var row = document.createElement('tr');
+		  // row の中を uid, name という ID のエレメントから作っておいて……
+      
+		  var uid = document.createElement('td');
+          uid.innerHTML = document.getElementById('uid').value;
+          row.appendChild( uid );
+          
+		  t.appendChild(row);
+      }
+
+    </script>
+  </head>
+  <body>
+    <h1>createElement, appendChild</h1>
+<hr />
+    <input type="button" value="Create Table" onclick="createTable()">
+<hr />
+    <input type="button" value="Add Name" onclick="addRow()">
+    <input type="text" id='uid' value="29988777">
+    <input type="text" id='name' value="idehara">
+    <div id='tableArea'></div>
+
+  </body>
+</html>
