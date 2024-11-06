@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <script  src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script>
+function showNasa()
+{
+  twttr.widgets.createTimeline(
+      {
+        sourceType: "profile",
+        screenName: "nasa"
+      },
+      document.getElementById("nasaSpace")
+  );
+}
+  </script>
+
+  <body>
+
+<button type="button" name="NASA" onclick='showNasa()'>NASA</button>
+<input type='text' id='searchName />
+<div id='nasaSpace'></div>
+
+  </body>
+</html>
