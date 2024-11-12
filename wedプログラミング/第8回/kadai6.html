@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <script  src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script>
+    function search()
+    {
+        sname = document.getElementById('InputField').value;  // ここで検索入力されたユーザ名を代入
+        alert(sname);
+        twttr.widgets.createTimeline(
+            { sourceType: "profile", screenName: sname },
+            document.getElementById('searchResult') // ここに埋め込み先エレメントを渡す
+        );
+    }
+  </script>
+
+  <body>
+
+  <input id='InputField' type="text" name="search" value="">
+  <button type="button" name="SearchButton" onclick='search()'>Search</button>
+
+  <div id='searchResult'></div>
+
+  </body>
+</html>
