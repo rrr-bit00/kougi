@@ -17,8 +17,14 @@ senpai -->|Yes| loop
 senpai -->|No| pass
 
 loop --- loopend
-loopend --> dameda
+%%loopend --> dameda
 dameda -->|Yes| rishu
 dameda -->|No| pass
 
+%%課題2
+tomo{"友達が3人
+    履修しているか？"}
+loopend --> tomo
+tomo -->|Yes| rishu
+tomo -->|No| dameda
 ```
