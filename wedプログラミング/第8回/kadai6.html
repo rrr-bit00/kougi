@@ -7,11 +7,19 @@
   <script>
     function search()
     {
+        con = document.getElementById('searchResult');
+
+        con.innerHTML = '';
+
         sname = document.getElementById('InputField').value;  // ここで検索入力されたユーザ名を代入
         alert(sname);
         twttr.widgets.createTimeline(
             { sourceType: "profile", screenName: sname },
-            document.getElementById('searchResult') // ここに埋め込み先エレメントを渡す
+            con, // ここに埋め込み先エレメントを渡す
+            { 
+              widht: 350,
+              height: 800,
+            }
         );
     }
   </script>
