@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title></title>
+
+    <script>
+    // https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/#searchexamples
+
+    function searchCallback(result) {
+      output = document.getElementById('outputArea');
+      results = result.results;
+      for (var r of results) {
+        var oneline = document.createElement('div');
+        oneline.innerHTML = r["collectionName"];
+		oneline.innerHTML += "<br>";
+		oneline.innerHTML += r["artistName"];
+		oneline.innerHTML += "<hr />";
+		output.appendChild(oneline);
+      }
+    }
+    </script>
+
+  </head>
+  <body>
+
+<div id='status'></div>
+<div id='outputArea'></div>
+
+<script id=caller src='https://itunes.apple.com/search?term=vaundy&lang=ja_JP&callback=searchCallback'></script>
+
+  </body>
+</html>
