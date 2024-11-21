@@ -61,7 +61,7 @@ goukei{E+R}
 
 goukei2{E+R}
 
-attend -->|=> 10 and < 12| goukei2
+attend -->|>= 10 and < 12| goukei2
 attend -->|=> 12| goukei
 goukei -->|=> 60| pass
 goukei -->|< 60| E_or_R
