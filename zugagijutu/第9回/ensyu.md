@@ -61,14 +61,14 @@ goukei{E+R}
 
 goukei2{E+R}
 
-attend -->|>= 10 and < 12| goukei2
-attend -->|>= 12| goukei
-goukei -->|>= 60| pass
+attend -->|=> 10 and < 12| goukei2
+attend -->|=> 12| goukei
+goukei -->|=> 60| pass
 goukei -->|< 60| E_or_R
-E_or_R -->|max >= 45 | pass
+E_or_R -->|max => 45 | pass
 E_or_R -->|max < 45 | fail
 
-goukei2 -->|>= 80| pass
+goukei2 -->|=> 80| pass
 goukei2 -->|< 80| fail
 
 ```
