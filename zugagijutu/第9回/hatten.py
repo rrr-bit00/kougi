@@ -26,7 +26,7 @@ def csv_file():
                                                                                         #ヘッダーが","で区切られているため、delimiter=で区切り文字を指定する
         rows = list(reader)                                                             #list型に変換し保存
         for row in rows:
-            if not row['合否']:                                                         #合否列の空の部分を判定
+            if not row['合否']:                                                         #合否列の空の部分を判定し、からの場合のみ下のコードを実行
                 temp_syu = int(row['出席回数'])                                          #文字から整数型に変換
                 temp_si = int(row['試験'])
                 temp_re = int(row['レポート'])
