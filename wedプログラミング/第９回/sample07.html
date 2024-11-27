@@ -7,14 +7,19 @@
 
     function searchCallback(result) {
       output = document.getElementById('outputArea');
-      results = result.results;
+      var image = document.CreateElement('img');
+      results = result.results; 
       for (var r of results) {
-        var oneline = document.createElement('div');
-        oneline.innerHTML = r["collectionName"];
-		oneline.innerHTML += "<br>";
-		oneline.innerHTML += r["artistName"];
-		oneline.innerHTML += "<hr />";
-		output.appendChild(oneline);
+        output.innerHTML += r.trackName;
+        output.innerHTML += "<hr />";
+        image.src += r.artworkUrl100;
+        output.appendchild(image);
+    //     var oneline = document.createElement('div');
+    //     oneline.innerHTML = r["collectionName"];
+		// oneline.innerHTML += "<br>";
+		// oneline.innerHTML += r["artistName"];
+		// oneline.innerHTML += "<hr />";
+		// output.appendChild(oneline);
       }
     }
     </script>
@@ -25,7 +30,7 @@
 <div id='status'></div>
 <div id='outputArea'></div>
 
-<script id=caller src='https://itunes.apple.com/search?term=vaundy&lang=ja_JP&callback=searchCallback'></script>
+<script id=caller src='https://itunes.apple.com/search?term=手嶌&lang=ja_JP&country=jp&callback=searchCallback'></script>
 
   </body>
 </html>
