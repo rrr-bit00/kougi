@@ -1,0 +1,53 @@
+<!DOCTYPE="utf-8">
+  <head>
+    <title></title>
+
+    <script>
+    // https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/#searchexamples
+
+    function searchCallback(result) {
+        output = document.getElementById('outputArea');
+        results = result.results;
+        for (var r of results) {
+            var oneline = document.createElement('div');
+            oneline.innerHTML = r["trackName"];
+            oneline.innerHTML += "<br>";
+            oneline.innerHTML += r["artistName"];
+            oneline.innerHTML += "<br>";
+            var img = document.createElement('img');
+            // ひとまず固定のイメージ URL。これを、検索結果のイメージに置き換えれば……
+            img.src = 'https://www.tama.ac.jp/img/common/logo.png';
+            oneline.appendChild(img);
+            oneline.appendChild( document.createElement('hr') );
+            output.appendChild(oneline);
+        }
+    }
+
+    function startRequest() {
+        var statusField = document.getElementById('status');
+        var s = '手嶌';   // ひとまず固定の検索単語。これを入力された単語に変えれば……
+        var searchString = encodeURIComponent(s);
+
+        var iTunesURI = 'https://itunes.apple.com/search?term='+searchString+'&callback=searchCallback';
+        var loader = document.createElement('script');
+        loader.src = iTunesURI; 
+        document.getElementById('scriptArea').appendChild(loader);
+
+        statusField.innerHTML = '';
+    }
+    </script>
+
+  </head>
+  
+  <body>
+
+<input type='text' id='searchWord' />
+<input type='button' value='検索' onclick="startRequest()"/>
+<hr />
+<div id='outputArea'></div>
+
+<div id='scriptArea'></div>
+
+  </body>
+</html>
+
