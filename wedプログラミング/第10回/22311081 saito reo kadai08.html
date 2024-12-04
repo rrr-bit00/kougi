@@ -7,6 +7,7 @@
 
     function searchCallback(result) {
         output = document.getElementById('outputArea');
+        output.innerHTML = "";        //検索結果をリセット
         results = result.results;
         for (var r of results) {
             var oneline = document.createElement('div');
