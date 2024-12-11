@@ -1,0 +1,33 @@
+<html>
+    <head>
+<script>
+    function attend(result){
+        var write = document.getElementById('warning');
+        results = result.Results;
+        for (var r of results){
+            var num1 = Number(r.Attend);
+            var num2 = Number(r.Absent);
+            var att = num1 / (num1+num2) * 100;
+            if (att < 80){
+                alert(att);
+                write.innerHTML += r.Sid;
+                write.innerHTML += '<hr />'
+            }
+        }
+
+        // 2)
+        // var r = result.Results[0];
+        // var num = r.Attend;
+        // var att = Number(num) / 15 * 100;
+        // alert(att+'%')
+        }
+        
+</script>
+    </head>
+    <body>
+    <div id="warning"></div>
+
+    <script src="https://iis.edu.tama.ac.jp/websv/students.php?cid=10001&&callback=attend&summary=1&key=22311081"></script>
+<!-- <script src="https://iis.edu.tama.ac.jp/websv/students.php?cid=10001&sid=29988777&callback=attend&summary=1&key=22311081"></script> -->
+    </body>
+</html>
