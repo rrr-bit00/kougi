@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+<script>
+    function attend(result){
+        
+        // 4)
+        var results = result.Results[0];
+        var row = document.getElementById('onestudent');
+        row.innerHTML = results.Sid;
+        for (a of results.Attends){
+            var att = document.createElement('td');
+            var num = a.Attend;
+            att.innerHTML = num;
+            row.appendChild(att);
+        }
+
+        // 3)
+        // var write = document.getElementById('warning');
+        // results = result.Results;
+        // for (var r of results){
+        //     var num1 = Number(r.Attend);
+        //     var num2 = Number(r.Absent);
+        //     var att = num1 / (num1+num2) * 100;
+        //     if (att < 80){
+        //         alert(att);
+        //         write.innerHTML += r.Sid;
+        //         write.innerHTML += '<hr />'
+        //     }
+        // }
+
+        // 2)
+        // var r = result.Results[0];
+        // var num = r.Attend;
+        // var att = Number(num) / 15 * 100;
+        // alert(att+'%')
+        }
+        
+</script>
+    </head>
+    <body>
+    <div id="warning"></div>
+
+    <table><tr><th>学籍番号</tr><tr id="onestudent"></tr></table>
+    <script src="https://iis.edu.tama.ac.jp/websv/students.php?cid=10001&sid=29988777&callback=attend&key=22311081"></script>
+    <!-- 1) <script src="https://iis.edu.tama.ac.jp/websv/students.php?cid=10001&&callback=attend&summary=1&key=22311081"></script> -->
+    <!-- 2,3) <script src="https://iis.edu.tama.ac.jp/websv/students.php?cid=10001&sid=29988777&callback=attend&summary=1&key=22311081"></script> -->
+    </body>
+</html>
