@@ -14,7 +14,12 @@
             var num = a.Attend;
             att.innerHTML = num;
             row.appendChild(att);
-            
+            //　欠席時の背景を変える
+            if (num == '0')
+            {
+                att.className = 'kesseki';
+            }
+            //　日付を追加
             var d = document.createElement('th');
             d.innerHTML = a.Date;
             midashi.appendChild(d);
