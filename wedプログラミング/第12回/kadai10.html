@@ -7,12 +7,16 @@
         // 4)
         var results = result.Results[0];
         var row = document.getElementById('onestudent');
+        var midashi = document.getElementById('midashi');
         row.innerHTML = results.Sid;
         for (a of results.Attends){
             var att = document.createElement('td');
             var num = a.Attend;
             att.innerHTML = num;
             row.appendChild(att);
+            var d = document.createElement('th');
+            d.innerHTML = a.Date;
+            midashi.appendChild(d);
         }
 
         // 3)
@@ -41,7 +45,7 @@
     <body>
     <div id="warning"></div>
 
-    <table><tr><th>学籍番号</tr><tr id="onestudent"></tr></table>
+    <table><tr id='midashi'><th>学籍番号</tr><tr id="onestudent"></tr></table>
     <script src="https://iis.edu.tama.ac.jp/websv/students.php?cid=10001&sid=29988777&callback=attend&key=22311081"></script>
     <!-- 1) <script src="https://iis.edu.tama.ac.jp/websv/students.php?cid=10001&&callback=attend&summary=1&key=22311081"></script> -->
     <!-- 2,3) <script src="https://iis.edu.tama.ac.jp/websv/students.php?cid=10001&sid=29988777&callback=attend&summary=1&key=22311081"></script> -->
