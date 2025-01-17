@@ -1,14 +1,14 @@
 <html>
     <head>
-        <script src="get.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <script type="module" src="get.js"></script>
     </head>
     <body>
-        
+        <div id="header">翻訳君</div>
         <textarea id='searchWord' placeholder="日本語以外の言語で入力してください"></textarea>
         <button type="button" name="henkanButton" onclick="active()">変換</button>
 
-        <textarea id="show"></textarea>
+        <div id="show">変換先</div>
         
-        <script src="API.js"></script>
     </body>
 </html>
