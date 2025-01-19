@@ -5,8 +5,10 @@ async function active()
         var hyouzi = document.getElementById('show');
         var text = document.getElementById('searchWord').value;
         var u_te = encodeURIComponent(text);
+        var lang = document.getElementById('selectLanguage');
+        var source = document.getElementById('selectSource');
         
-        const src = api + u_te +'&target_lang=JA';
+        const src = api + u_te +'&source_lang='+source.value+'&target_lang='+lang.value+"";
         const response = await fetch(src);
         const data = await response.json();
 
