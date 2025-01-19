@@ -4,10 +4,34 @@
         <script type="module" src="get.js"></script>
     </head>
     <body>
-        <textarea id='searchWord' placeholder="日本語以外の言語で入力してください"></textarea>
-        <button type="button" name="henkanButton" onclick="active()">変換</button>
+        <div class="container">
+            <textarea id='searchWord' placeholder="ここに入力"></textarea>
+            <button type="button" name="henkanButton" onclick="active()">変換</button>
+            <textarea id="show" placeholder="変換先"></textarea>
+        </div>
 
-        <textarea id="show" placeholder="変換先"></textarea>
+        <div class="container">
+            <select id="selectSource">
+                <option value="" selected>デフォルト</option>
+                <option value="JA">日本語</option>
+                <option value="EN">英語</option>
+                <option value="FR">フランス語</option>
+                <option value="RU">ロシア語</option>
+                <option value="KO">韓国語</option>
+                <option value="ZH">中国語</option>
+            </select>
+        
+            <select id="selectLanguage">
+                <option value="JA" selected>JA</option>
+                <option value="EN-US">US</option>
+                <option value="EN-GB">GB</option>
+                <option value="FR">FR</option>
+                <option value="RU">RU</option>
+                <option value="KO">KO</option>
+                <option value="ZH-HANS">HANS</option>
+                <option value="ZH-HANT">HANT</option>
+            </select>
+        </div>
         
     </body>
 </html>
