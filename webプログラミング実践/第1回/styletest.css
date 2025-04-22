@@ -13,3 +13,33 @@ div#test01 {
 .important {
   color: #a00;
 }
+
+#members {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+td {
+  border: 1px solid black;
+}
+
+th {
+  background-color: darkgoldenrod;
+  border: 1px solid black;
+}
+
+.ol {
+  background-color: lightgreen;
+}
+
+.el {
+  background-color: darkgoldenrod;
+}
+
+.name {
+  text-align: center;
+}
+
+.last3 {
+  font-weight: bold;
+}
