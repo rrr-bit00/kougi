@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>課題ゼロ</title>
+    <head><link rel="stylesheet" type="text/css" href="styletest.css"></head>
+  </head>
+  <body>
+
+<h2>class と id とスタイルシート</h2>
+
+<p>HTML の中に物理要素（色とか、サイズとか）を書き込むのは、ルール違反です。
+  物理要素は、カスケーディングスタイルシート（スタイルシート）を使って記述します。
+</p>
+
+<p>スタイルシートは、head の中に直接書くこともありますが、
+  普通は別ファイルで用意しておいて、head で読み込みます。</p>
+
+  <hr />
+
+<p>スタイルシートの中では、タグを指定する他、
+ピリオド＋クラス名、ナンバー＋ID名で、クラスや ID を指定できます。</p>
+
+<p>これは、ただの段落</p>
+<div id='test01'><p>これは、test01 という id をもつ division に属する段落</p></div>
+<div id='test02'><p>これは、test02 という id をもつ division に属する段落</p></div>
+
+
+<div class='important'>
+  <ul>
+    <li>important クラスの中の箇条書きの項目</li>
+    <li>important クラスの中の箇条書きの項目</li>
+  </ul>
+</div>
+<p class='important'>これは important というクラスに所属する段落</p>
+
+<hr />
+
+<h1>課題</h1>
+
+<p>次のテーブルを、一行おきに色を変える・枠線をつける・名前を中央よせにする・番号の下３桁を太字にするなど、見やすく表示するようにスタイルシートを記述し、そのスタイルシートを提出しなさい。</p>
+
+<table id='members'>
+  <tr class='header'><th>番号</th><th>氏名</th></tr>
+  <tr class='ol'><td>29988<span class='last3'>777</span></td><td class='name'>多摩　太郎</td></tr>
+  <tr class='el'><td>29988<span class='last3'>666</span></td><td class='name'>聖　花子</td></tr>
+  <tr class='ol'><td>29988<span class='last3'>555</span></td><td class='name'>永山　進</td></tr>
+  <tr class='el'><td>29988<span class='last3'>444</span></td><td class='name'>桜　丘</td></tr>
+</table>
+
+  </body>
+</html>
