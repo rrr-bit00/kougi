@@ -1,0 +1,35 @@
+table {
+  border-collapse: collapse;
+  background-color: #ff8;
+}
+
+h1 {
+  color: #f88;
+  background-color: #222;
+}
+
+td {
+    text-align: center;
+}
+
+th,td {
+    border: solid thin;
+}
+
+div h1 {
+    color: #fff;
+}
+
+.h1normal {
+    background-color: #f00;
+}
+
+#tama {
+    background-color: #0f0;
+}
+
+#school {
+    background-color: #88f;
+}
+
+#school > li { border-top: solid; }
