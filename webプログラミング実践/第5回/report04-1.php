@@ -38,6 +38,9 @@
 
 <?php
 
+$max = 0;		// 最大回数の記録用
+$max_count = 0;
+
 for($i = 1; $i < 1000; $i++)
 {
 	$x = $i;
@@ -57,10 +60,15 @@ for($i = 1; $i < 1000; $i++)
 		}
 		// $count を１個増やす
 		$count = $count + 1;
+		if ($max_count < $count) {
+			$max = $i;
+			$max_count = $count;
+		}
 	}
 
 	print("$i について $count 回まわりました<br>\n");
 }
+print("$max が $max_count 回まわって最大でした<br>\n")
 
  ?>
 
