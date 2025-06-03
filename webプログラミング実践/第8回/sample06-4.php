@@ -30,6 +30,9 @@
 
   print("<pre>");
 // $array2 から、フルーツの名前と色と値段を取り出して表示しよう
+  foreach ($array2 as $value) {
+    print("{$value['name']} は {$value['color']}, {$value['price']}, {$value['weight']}\n");
+  }
   print("</pre><hr />");
 
  ?>
