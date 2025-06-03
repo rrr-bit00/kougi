@@ -23,7 +23,9 @@ else
     $id = $_POST['id'];         // 毎回 $_POST を書くのが面倒なので、変数で受ける
     $pass = $_POST['pass'];
 
-    if( $pass == $PASSWORD[$id])  // この行を書き換える
+    /* !emptyで配列の中に入力された$idがあるか確認
+       先頭に書かないと$pass==$PASSWORD[$id]を判定するため、無駄が生じる */
+    if( !empty($PASSWORD[$id]) && $pass == $PASSWORD[$id])  // この行を書き換える
     {
         print("$id で LOGIN 成功");
     }
