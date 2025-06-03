@@ -48,6 +48,13 @@
 			print("<hr>");
    }
   ?>
-
+  <h2>解答</h2>
+  <?php
+	print("<table> <th>id</th> <th>name</th>");
+	foreach ($members as $value) {
+		print("<tr> <td>{$value['id']}</td> <td>{$value['name']}</td> </tr>");
+	}
+	print("<table>")
+  ?>
 	</body>
 </html>
