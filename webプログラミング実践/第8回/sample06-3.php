@@ -34,7 +34,13 @@
 
 // では、$double_array から、フルーツの名前と色と値段を取り出して表示しよう
 
+  var_dump($double_array);
   print("</pre><hr />");
+
+  print("<pre>");
+  foreach ($double_array as $key => $value) {
+    print("$key は {$value['color']}, {$value['price']}, {$value['weight']}\n");
+  }
 
 
  ?>
