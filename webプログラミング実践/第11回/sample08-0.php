@@ -8,7 +8,10 @@
 
 <?php
 
+require_once 'config.php';
 
+$myid = 'u22311081';
+$mydb = 'webpg_u22311081';
 $db = new mysqli('iis.edu.tama.ac.jp', $myid, $mypass, $mydb);
 
 
@@ -17,6 +20,7 @@ print( $db->host_info );
 //
 
 $db->close();
+
 
 ?>
 
