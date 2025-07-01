@@ -8,6 +8,7 @@
 
 <?php
 
+require_once 'config.php';
 
 $db = new mysqli('iis.edu.tama.ac.jp', $myid, $mypass, $mydb);
 
