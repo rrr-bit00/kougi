@@ -8,11 +8,12 @@
 
 <?php
 
+require_once 'config.php';
 
 $db = new mysqli('iis.edu.tama.ac.jp', $myid, $mypass, $mydb);
 
 
-$res = $db->query("insert into fruits (id,name) values (8,'mango')");
+$res = $db->query("insert into fruits (id,name) values (7,'mango')");
 var_dump($res);
 print($db->error);
 print('<hr />');
