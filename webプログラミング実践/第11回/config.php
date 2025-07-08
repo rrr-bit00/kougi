@@ -1,4 +1,0 @@
-<?php
-$myid = 'u22311081';
-$mypass = 'REMOVED';
-$mydb = 'webpg_u22311081';
