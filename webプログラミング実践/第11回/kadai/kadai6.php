@@ -6,7 +6,7 @@ $res = $db->query(
 
 while($d = $res->fetch_assoc())
 {
-    if ($d['name'] == "") $d['name'] = "NULL";
+    if ($d['name'] == "") $d['name'] = "未入力";
     $new_d = array_map("htmlspecialchars", $d);
     // var_dumpで表示するとキーがm.とu.が消えたフィールド名になる
     print(
