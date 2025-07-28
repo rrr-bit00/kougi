@@ -36,24 +36,31 @@ if( !empty($_POST['uid']) )
             $d = $res->fetch_assoc();   //  １個なのでループで回す必要なし
             // 「データベースから取ってきたパスワードと、入力されたパスワードが一致するならば」
             // と ???????? の中に書こう
-            if( $d['password']===$_POST['password'] )
+            if(password_verify($_POST['password'], $d['password']))
                 // ログイン成功
-                $login = true;
+                $_SESSION['uid'] = $_POST['uid'];
+                header('Location: bbs.php');
+                exit();
+        }
+        else if ($res->num_rows == 0) {
+            print('UIDが見つかりません<br>');
+            print('<a href="sign_up.php">ここをクリックしてユーザー登録をする</a>');
+            exit();
         }
     }
 
     // ログイン成功なら、SESSION 変数に、送られてきたユーザ ID を保存しておこう
-    if( $login )
-    {
-        // 「セッション変数に、ユーザ ID を保存」と書きたい。
-        $_SESSION['uid'] = $_POST['uid'];
-        print('Welcome ' . $_SESSION['uid']);
-    }
-    // 失敗なら、エラー表示
-    else {
-        print("Password Error<br />\n");
-    }
-    $db->close();
+//     if( $login )
+//     {
+//         // 「セッション変数に、ユーザ ID を保存」と書きたい。
+//         $_SESSION['uid'] = $_POST['uid'];
+//         print('Welcome ' . $_SESSION['uid']);
+//     }
+//     // 失敗なら、エラー表示
+//     else {
+//         print("Password Error<br />\n");
+//     }
+//     $db->close();
 }
 
  ?>
